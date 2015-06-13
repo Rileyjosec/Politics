@@ -1,0 +1,48 @@
+html body {
+	margin: 0 auto;
+	width: 100%;
+	background: #090B3A;
+	font-family: 'PT Sans', sans-serif; 
+}
+
+.inputBar {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  width: 450px;
+  height: 227.59px;
+  padding-top: 20%;
+}
+
+.legiNames {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  width: 459.5px;
+  height: 40px;
+  padding-top: 2%;
+  font-family: 'PT Sans', sans-serif;
+  font-size: 25px;
+}
+
+input {
+	
+	width: 30em;
+}
+
+a {
+	text-decoration: none;
+	color: white;
+}
+
+h1 {
+	font-family: 'Droid Sans', sans-serif;
+  font-size: 50px;
+  color: #6ED3E7;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  width: 257.39px;
+  height: 55px;
+  padding-top: 50px;
+}
