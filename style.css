@@ -12,21 +12,23 @@ html body {
   width: 450px;
   height: 227.59px;
   padding-top: 20%;
+  padding-bottom: 2%;
 }
 
 .legiNames {
   display: flex;
   align-items: center;
-  margin: 0 auto;
-  width: 459.5px;
+  margin: 20px auto;
+  width: 520.5px;
   height: 40px;
   padding-top: 2%;
   font-family: 'PT Sans', sans-serif;
   font-size: 25px;
+  padding-left: 46px;
 }
 
-input {
-	
+#searchArea
+ {
 	width: 30em;
 }
 

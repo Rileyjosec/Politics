@@ -1,7 +1,7 @@
 var app = angular.module('polApp');
 
 app.controller('mainCtrl', function ($scope, polService) {
-	$scope.polly = 'Place Last name of Senator here';
+	$scope.polly = '';
 	
 	$scope.masterList = {};
 	$scope.getVotes = function () {
@@ -9,6 +9,7 @@ app.controller('mainCtrl', function ($scope, polService) {
 		polService.searchLegislators($scope.polly)
 		.success(function(data){
 			$scope.legislators = data.results;
+			console.log($scope.legislators);
 			
 			//search the array to find the first exact match on a name
 //			polService.getVotes('someSpecificBioGuide').then(function(arrayOfHisVotes){
@@ -20,6 +21,10 @@ app.controller('mainCtrl', function ($scope, polService) {
 		})
 	};
 	
+	$scope.getLegiVotes = function(info) {
+		polService.currentLegiInfo = info;
+		polService.getBills(info.bio_bioguide);
+	}
 	
-	console.log('Hey there punk');
+	console.log(id);
 })

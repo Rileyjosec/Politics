@@ -3,7 +3,7 @@
 			<div class="row">
 				<div class="col-lg-6">
 			    <div class="input-group">
-			      <input type="text" class="form-control" placeholder="Search for..." ng-model="polly" >
+			      <input type="text" class="form-control" id="searchArea" placeholder="search Senator by LAST name" ng-model="polly" >
 			      <span class="input-group-btn">
 			        <button class="btn btn-default" type="button" ng-click="getVotes()">Go!</button>
 			      </span>
@@ -12,5 +12,5 @@
 			</div>		
 		</form>
 		<div class="legiNames" ng-repeat="poli in legislators">
-			<a><div ng-click='getLegiVotes(poli.bioGuide)'>{{poli.first_name}} {{poli.last_name}}</div></a>
-		</div>
+			<a><div ng-click='getLegiVotes(poli.bioGuide)'>{{poli.first_name}} {{poli.last_name}} - Rep. State: {{poli.state_name}}</div></a>
+		</div>-

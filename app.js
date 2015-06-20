@@ -3,14 +3,15 @@ var app = angular.module("polApp", ['ngRoute']);
 
 app.config(function($routeProvider){
         $routeProvider.
-            when('/login', {
+            when('/home', {
                 templateUrl: 'searchLegi/mainPage.html'
             }).
             when('/billSumm', {
-                templateUrl: 'billSumm/billSumm.html'
+                templateUrl: 'billSumm/billSumm.html',
+                controller: 'mainCtrl'
             }).
             otherwise({
-                redirectTo: '/login'
+                redirectTo: '/home'
             });
     });
     
