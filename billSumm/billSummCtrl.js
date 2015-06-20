@@ -1,23 +1,16 @@
 var app = angular.module('polApp');	
 	
 	
-app.controller = 	
-	$scope.getLegiVotes = function () {
+app.controller('billSummCtrl', function ($scope, $rootScope, $location, polService) {
 		
-		polService.searchLegislators($scope.polly)
-		.success(function(data){
-			$scope.legislators = data.results;
-			console.log($scope.legislators);
+		$scope.getLegiVotes = function (legislator) {
 			
-			//search the array to find the first exact match on a name
-//			polService.getVotes('someSpecificBioGuide').then(function(arrayOfHisVotes){
-//			
-//			})
-		})
-		.error(function(err){
-			console.log(err)
-		})
+		$scope.selectedSenator = legislator;
+		polService.getBills()
+		.success(function(info) {
+			$scope.bill = info.data;
+			console.log($scope.bill);
+		});
 	};
-	
-	
-	polService.currentLegi
+	console.log('dumb dumb');	
+});

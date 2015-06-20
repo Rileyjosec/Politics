@@ -12,5 +12,5 @@
 			</div>		
 		</form>
 		<div class="legiNames" ng-repeat="poli in legislators">
-			<a><div ng-click='getLegiVotes(poli.bioGuide)'>{{poli.first_name}} {{poli.last_name}} - Rep. State: {{poli.state_name}}</div></a>
-		</div>-
+			<div ng-click='billSummPage(poli)'>{{poli.first_name}} {{poli.last_name}} - Rep. State: {{poli.state_name}}</div>
+		</div>

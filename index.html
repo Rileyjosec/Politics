@@ -7,24 +7,8 @@
 		<link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
 		
 	</head>
-	<body ng-controller="mainCtrl">
-		<h1>POLITICO</h1>
-		<form class="inputBar">
-			<div class="row">
-				<div class="col-lg-6">
-			    <div class="input-group">
-			      <input type="text" class="form-control" id="searchArea" placeholder="search Senator by LAST name" ng-model="polly" >
-			      <span class="input-group-btn">
-			        <button class="btn btn-default" type="button" ng-click="getVotes()">Go!</button>
-			      </span>
-			    </div>
-			  </div>
-			</div>		
-		</form>
-		<div class="legiNames" ng-repeat="poli in legislators">
-			<a href="billSumm/billSumm.html"><div ng-click='getLegiVotes(poli)'>{{poli.first_name}} {{poli.last_name}} - Rep. State: {{poli.state_name}}</div></a>
-		</div>
-		
+	<body>
+		<ng-view></ngview>
 
 		
 		<!-- ALL SCRIPTS -->
@@ -32,8 +16,9 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-route.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 		<script src="app.js"></script>
-		<script src="polService.js"></script>
-		<script src="mainCtrl.js"></script>
+		<script src="Services/polService.js"></script>
+		<script src="searchLegi/mainPageCtrl.js"></script>
+		<script src="billSumm/billSummCtrl.js"></script>
 	</body>
 
 </html>
