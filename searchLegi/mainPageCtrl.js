@@ -14,8 +14,8 @@ app.controller('mainPageCtrl', function ($scope, $rootScope, $location, polServi
 			console.log(err)
 		})
 	};
-	
-	$scope.billSummPage = function(poli) {
+
+	$scope.billSummPage = function (poli) {
 		$rootScope.poli = poli;
 		console.log($rootScope.poli);
 		$location.path('/billSumm');
