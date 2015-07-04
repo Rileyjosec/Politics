@@ -2,7 +2,7 @@ var app = angular.module('polApp');
 
 
 app.controller('billSummCtrl', function ($scope, $rootScope, $location, polService) {
-
+	$rootScope.poli;
 //	$scope.getLegiVotes = function (legislator) {
 //
 //		$scope.selectedSenator = legislator;

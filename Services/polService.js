@@ -18,17 +18,19 @@ app.service('polService', function ($http) {
 	this.getBills = function (id) {
 		return $http({
 			method: 'GET',
-			url: 'https://congress.api.sunlightfoundation.com/votes?voter_ids.' + id + '__exists=true' + apiKey + pageNum + '&fields=voter_ids,result,bill_id'
+			url: 'https://congress.api.sunlightfoundation.com/votes?voter_ids.' + id + '__exists=true' + apiKey + pageNum //+ '&fields=voter_ids,result,bill_id'
 		})
 			.then(function (data) {
 				console.log(data.data);
 				return data.data;
 		})
-		this.getDescriptions = function (billId) {
-			return $http({
-			 method: 'GET',
-			 url: 'https://congress.api.sunlightfoundation.com/votes?voter_ids.' + billId + apiKey 
-			});
-		}
 	};
 });
+
+
+//		this.getDescriptions = function (billId) {
+//			return $http({
+//			 method: 'GET',
+//			 url: 'https://congress.api.sunlightfoundation.com/votes?voter_ids.' + billId + apiKey 
+//			});
+//		}
